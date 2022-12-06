@@ -1,0 +1,8 @@
+<launch>
+    <!-- 启动SLAM节点 -->
+    <include file="$(find cmz_slam)/launch/01_gmapping.launch" />
+    <!-- 运行move_base节点 -->
+    <include file="$(find cmz_slam)/launch/05_path.launch" />
+    <!-- 运行rviz -->
+   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find cmz_slam)/rviz/auto.rviz" />
+</launch>

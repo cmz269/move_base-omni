@@ -1,0 +1,4 @@
+<launch>
+    <arg name="filename" value="$(find cmz_slam)/map/dating " /><!--存储的路径-->
+    <node name="map_save" pkg="map_server" type="map_saver" args="-f $(arg filename)" />
+</launch>
