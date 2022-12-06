@@ -1,0 +1,8 @@
+<launch>
+	<include file="$(find model_urdf)/launch/display.launch" />
+	<include file="$(find rplidar_ros)/launch/rplidar_a3.launch" />
+	<node name="car_controllerNode"   
+	      pkg="car_controller"  
+	      type="car_controller"       
+	      output="screen" />
+</launch>
